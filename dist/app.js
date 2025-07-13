@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const todo_routes_1 = require("./routes/todo.routes");
 const app = (0, express_1.default)();
+// Middlewares
+app.use(express_1.default.json());
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });

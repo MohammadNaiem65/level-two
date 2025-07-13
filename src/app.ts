@@ -3,6 +3,9 @@ import { todoRouter } from './routes/todo.routes';
 
 const app: Application = express();
 
+// Middlewares
+app.use(express.json());
+
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello World!');
 });
